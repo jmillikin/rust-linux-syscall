@@ -1,0 +1,26 @@
+[package]
+name = "linux-syscall"
+version = "1.0.0"
+authors = ["John Millikin <john@john-millikin.com>"]
+edition = "2018"
+description = "Linux syscall macros"
+readme = "README.md"
+repository = "https://github.com/jmillikin/rust-linux-syscall"
+license = "0BSD"
+
+categories = [
+	"no-std",
+	"os::linux-apis",
+]
+
+include = [
+	"/LICENSE.txt",
+	"/linux-syscall/linux-syscall.rs",
+	"/linux-syscall/arch/**/*.rs",
+]
+
+[dependencies]
+linux-errno = { version = "1.0.1" }
+
+[lib]
+path = "linux-syscall/linux-syscall.rs"
