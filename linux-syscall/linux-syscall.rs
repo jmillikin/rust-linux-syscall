@@ -328,6 +328,16 @@ pub mod arch {
 		pub use self::syscall_tbl::*;
 	}
 
+	/// Linux syscall numbers for the `s390x` architecture.
+	#[cfg(any(target_arch = "s390x", doc))]
+	pub mod s390x {
+		mod syscall_asm;
+		pub use self::syscall_asm::Result;
+
+		pub(crate) mod syscall_tbl;
+		pub use self::syscall_tbl::*;
+	}
+
 	/// Linux syscall numbers for the `x86` architecture.
 	#[cfg(any(target_arch = "x86", doc))]
 	pub mod x86 {
@@ -357,6 +367,9 @@ pub use crate::arch::aarch64::syscall_tbl::*;
 
 #[cfg(target_arch = "riscv64")]
 pub use crate::arch::riscv64::syscall_tbl::*;
+
+#[cfg(target_arch = "s390x")]
+pub use crate::arch::s390x::syscall_tbl::*;
 
 #[cfg(target_arch = "x86")]
 pub use crate::arch::x86::syscall_tbl::*;

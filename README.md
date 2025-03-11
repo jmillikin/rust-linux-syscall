@@ -11,6 +11,7 @@ Supported architectures:
 - `aarch64`
 - `arm`
 - `riscv64`
+- `s390x`
 - `x86`
 - `x86_64`
 
