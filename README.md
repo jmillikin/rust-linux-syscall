@@ -42,10 +42,10 @@ http_archive(
 http_archive(
     name = "rust_linux_syscall",
     # Obtain the package checksum from the release page:
-    # https://github.com/jmillikin/rust-linux-syscall/releases/tag/v1.0.0
+    # https://github.com/jmillikin/rust-linux-syscall/releases/tag/v1.1.0
     sha256 = "",
-    strip_prefix = "linux-syscall-1.0.0",
-    urls = ["https://github.com/jmillikin/rust-linux-syscall/releases/download/v1.0.0/linux-syscall-1.0.0.tar.xz"],
+    strip_prefix = "linux-syscall-1.1.0",
+    urls = ["https://github.com/jmillikin/rust-linux-syscall/releases/download/v1.1.0/linux-syscall-1.1.0.tar.xz"],
 )
 ```
 
@@ -53,5 +53,5 @@ To depend on `linux-syscall` from a Cargo workspace:
 
 ```
 [dependencies]
-linux-syscall = { version = "1.0.0" }
+linux-syscall = { version = "1.1.0" }
 ```
