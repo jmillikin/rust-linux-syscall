@@ -318,6 +318,16 @@ pub mod arch {
 		pub use self::syscall_tbl::*;
 	}
 
+	/// Linux syscall numbers for the `loongarch64` architecture.
+	#[cfg(any(target_arch = "loongarch64", doc))]
+	pub mod loongarch64 {
+		mod syscall_asm;
+		pub use self::syscall_asm::Result;
+
+		pub(crate) mod syscall_tbl;
+		pub use self::syscall_tbl::*;
+	}
+
 	/// Linux syscall numbers for the `riscv64` architecture.
 	#[cfg(any(target_arch = "riscv64", doc))]
 	pub mod riscv64 {
@@ -364,6 +374,9 @@ pub use crate::arch::arm::syscall_tbl::*;
 
 #[cfg(target_arch = "aarch64")]
 pub use crate::arch::aarch64::syscall_tbl::*;
+
+#[cfg(target_arch = "loongarch64")]
+pub use crate::arch::loongarch64::syscall_tbl::*;
 
 #[cfg(target_arch = "riscv64")]
 pub use crate::arch::riscv64::syscall_tbl::*;

@@ -10,6 +10,7 @@ current target platform.
 Supported architectures:
 - `aarch64`
 - `arm`
+- `loongarch64`
 - `riscv64`
 - `s390x`
 - `x86`
