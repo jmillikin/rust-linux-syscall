@@ -1,0 +1,5 @@
+{
+    "url": "https://github.com/jmillikin/rust-posix-errno/releases/download/v1.0.2/posix-errno-1.0.2.tar.xz",
+    "integrity": "sha256-4/HIA4OXWz8t7M6Wp5kYE5LqkPu0VAqntr/ZdgjF5XA=",
+    "strip_prefix": "posix-errno-1.0.2"
+}

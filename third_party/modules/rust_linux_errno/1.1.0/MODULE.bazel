@@ -1,0 +1,23 @@
+module(
+    name = "rust_linux_errno",
+    version = "1.1.0",
+    compatibility_level = 1,
+)
+
+bazel_dep(
+    name = "platforms",
+    version = "0.0.10",
+)
+bazel_dep(
+    name = "rules_rust",
+    version = "0.52.2",
+)
+bazel_dep(
+    name = "rust_posix_errno",
+    version = "1.0.2",
+)
+
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+    versions = ["1.63.0"],
+)
