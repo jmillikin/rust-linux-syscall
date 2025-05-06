@@ -1,7 +1,5 @@
 load("@rules_rust//rust:defs.bzl", "rust_doc", "rust_doc_test", "rust_library")
 
-package(default_visibility = ["//visibility:public"])
-
 rust_library(
     name = "linux-syscall",
     srcs = glob([
@@ -12,6 +10,7 @@ rust_library(
     target_compatible_with = [
         "@platforms//os:linux",
     ],
+    visibility = ["//visibility:public"],
     deps = [
         "@rust_linux_errno//linux-errno",
     ],
