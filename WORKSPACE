@@ -10,16 +10,16 @@ http_archive(
 
 http_archive(
     name = "rust_posix_errno",
-    sha256 = "0c86c849ff673372fe6415d4004a233565b57b2884ea49d3b725dd1296cc2529",
-    strip_prefix = "posix-errno-1.0.1",
-    urls = ["https://github.com/jmillikin/rust-posix-errno/releases/download/v1.0.1/posix-errno-1.0.1.tar.xz"],
+    sha256 = "e3f1c80383975b3f2decce96a799181392ea90fbb4540aa7b6bfd97608c5e570",
+    strip_prefix = "posix-errno-1.0.2",
+    urls = ["https://github.com/jmillikin/rust-posix-errno/releases/download/v1.0.1/posix-errno-1.0.2.tar.xz"],
 )
 
 http_archive(
     name = "rust_linux_errno",
-    sha256 = "009d58c93c806f178004a4cd30af211860bc44f8ce7d02eb4f544821add7ca99",
-    strip_prefix = "linux-errno-1.0.1",
-    urls = ["https://github.com/jmillikin/rust-linux-errno/releases/download/v1.0.1/linux-errno-1.0.1.tar.xz"],
+    sha256 = "3c235f30c7081b4d1647d8d03e4dd83a88833e32c6db444c699b9ed07ecb14ee",
+    strip_prefix = "linux-errno-1.1.0",
+    urls = ["https://github.com/jmillikin/rust-linux-errno/releases/download/v1.1.0/linux-errno-1.1.0.tar.xz"],
 )
 
 load(
@@ -31,6 +31,5 @@ load(
 rules_rust_dependencies()
 
 rust_register_toolchains(
-    edition = "2018",
     version = "1.63.0",
 )
